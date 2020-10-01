@@ -1,0 +1,70 @@
+{% extends 'layout.html' %}
+
+<link rel="stylesheet" href="/static/css/layout.css" />
+
+{% block content%}
+
+<div style="padding: 20px;" class="container-fluid">
+  <div style="text-align: center;" class="jumbotron">
+    <h1>VidFLix Movies</h1>
+    <p>A widestream of movies for everyone</p>
+    <h5> total of {{ movies.count }} movies to love</h5>
+    <h6> (new movies added weekly)</h6>
+  </div>
+  
+  <br>
+  
+  <h2 style="padding: 15px; margin: auto;margin-bottom: 10px; border: 1px black solid;border-radius: 5px; text-align: center; background-color:  rgb(80, 152, 219); ">Movie List</h2>
+  
+    {% for movies in movies %}
+  
+    <div class="card " style="width: 18rem; font-family: Mali, cursive;text-align: center; margin-left: 40px;">
+    <img src="{{ movies.image_url }}" class="card-img-top" alt="movie image">
+      <div class="card-body">
+        <h5 style="font-weight: bold;" class="card-title">{{ movies.title }}</h5>
+        <h6>{{ movies.release_year}}</h6>
+        <br>
+        <h7 style="font-weight: bold;" class="card-title">Directed by: {{ movies.director }}</h7>
+        <br>
+        <div style="padding: 5px;">
+           <h8 style="font-size: 13px;" class="card-title">Starring: {{ movies.staring }}</h8>
+        </div>
+        <br>
+        <div style="padding: 5px;">
+           <a style="background-color: rgb(80, 152, 219); color: black;" href="/details/{{movies.id}}" class="btn btn-info"> <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-bar-left" fill="currentColor"
+            xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd"
+              d="M5.854 4.646a.5.5 0 0 0-.708 0l-3 3a.5.5 0 0 0 0 .708l3 3a.5.5 0 0 0 .708-.708L3.207 8l2.647-2.646a.5.5 0 0 0 0-.708z" />
+            <path fill-rule="evenodd"
+              d="M10 8a.5.5 0 0 0-.5-.5H3a.5.5 0 0 0 0 1h6.5A.5.5 0 0 0 10 8zm2.5 6a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 1 0v11a.5.5 0 0 1-.5.5z" />
+          </svg> See movie details <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-bar-right" fill="currentColor"
+            xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd"
+              d="M10.146 4.646a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L12.793 8l-2.647-2.646a.5.5 0 0 1 0-.708z" />
+            <path fill-rule="evenodd"
+              d="M6 8a.5.5 0 0 1 .5-.5H13a.5.5 0 0 1 0 1H6.5A.5.5 0 0 1 6 8zm-2.5 6a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 1 0v11a.5.5 0 0 1-.5.5z" />
+          </svg></a>
+        </div>
+        <br>
+        <h6 style="padding: 3px; font-weight: bold;" class="card-title">$ {{ movies.price }}</h6>
+        </h6><a style="background-color: rgb(80, 152, 219); color: black;" href="#" class="btn btn-primary"><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-down-right-circle-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+  <path fill-rule="evenodd" d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-9.5 3h4a.5.5 0 0 0 .5-.5v-4a.5.5 0 0 0-1 0v2.793L5.854 5.146a.5.5 0 1 0-.708.708L9.293 10H6.5a.5.5 0 0 0 0 1z"/>
+</svg><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-down-right-circle" fill="currentColor"
+  xmlns="http://www.w3.org/2000/svg">
+  <path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+  <path fill-rule="evenodd"
+    d="M10.5 11h-4a.5.5 0 0 1 0-1h2.793L5.146 5.854a.5.5 0 1 1 .708-.708L10 9.293V6.5a.5.5 0 0 1 1 0v4a.5.5 0 0 1-.5.5z" />
+</svg> Stream now <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-play" fill="currentColor"
+          xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd"
+            d="M10.804 8L5 4.633v6.734L10.804 8zm.792-.696a.802.802 0 0 1 0 1.392l-6.363 3.692C4.713 12.69 4 12.345 4 11.692V4.308c0-.653.713-.998 1.233-.696l6.363 3.692z" />
+        </svg> </a>
+      </div>
+    </div>
+        {% endfor %}
+      </div>
+  
+        {% endblock %}
+
+  
+      </div>
