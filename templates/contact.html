@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+
+
+<link rel="stylesheet" href="/static/css/layout.css">
+
+
+{% block content%}
+<div class="container">
+  <div style="text-align: center;" class="jumbotron">
+    <h1>Contact us</h1>
+    <p style="font-family: Mali, cursive;">Customer service will contact you</p>
+  </div>
+
+  <div class="form-area card card-body">
+    <form role="form" method="POST">
+      {% csrf_token %}
+      <input type="text" class="form-control card-body" id="subject" name="subject" placeholder="Subject" maxlength="70"
+        required>
+  </div>
+  <br>
+  <div class="form-group card-body">
+    <input type="email" class="form-control" id="email" name="email" placeholder="Email" required>
+  </div>
+
+  <div class="form-group card-body">
+    <textarea class="form-control" type="textarea" id="message" name="message" placeholder="Message" maxlength="300"
+      rows="7"></textarea>
+  </div>
+
+  <button type="submit" name="submit" class="btn btn-s btn-secondary "
+    style="font-family: Mali, cursive; margin: 15px; margin-right: 15px;">Submit</button>
+  </form>
+  {% endblock %}
+  
+ 

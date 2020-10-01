@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{ title }} - Vidflix, the new Blockbuster</title>
+
+    <!-- CSS only -->
+    <link rel="stylesheet" href="../static/css/layout.css" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mali:wght@300&family=Rock+Salt&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+  </head>
+
+  <body style="font-family: Mali, cursive; font-family: Rock Salt, cursive;">
+    <nav
+      class="navbar navbar-expand-lg navbar-light"
+      style="background-color: rgb(80, 152, 219);"
+    >
+      <a class="navbar-brand" href="http://localhost:8000/home">Vidflix</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="http://localhost:8000/home"
+              >Home <span class="sr-only">(current)</span></a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="http://localhost:8000/about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="http://localhost:8000/contact">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="http://localhost:8000/movielist"
+              >MovieList</a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+    {% load static %} {% block content %} {% endblock %}
+    <br />
+    <br />
+    <!-- JS, Popper.js, and jQuery -->
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+      integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+      crossorigin="anonymous"
+    ></script>
+    <br />
+    <br />
+    {% block scripts %} {% endblock %}
+
+    <br />
+    <!-- Footer -->
+    <footer
+      style="background-color: rgb(209, 212, 212);"
+      class="page-footer font-small indigo"
+    >
+      <!-- Footer Links -->
+      <div class="container">
+        <!-- Grid row-->
+        <div class="row text-center d-flex justify-content-center pt-5 mb-3">
+          <!-- Grid column -->
+          <div class="col-md-2 mb-3">
+            <h6 class="text-uppercase font-weight-bold">
+              <a href="http://localhost:8000/about">About us</a>
+            </h6>
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-2 mb-3">
+            <h6 class="text-uppercase font-weight-bold">
+              <a href="http://localhost:8000/movielist">MovieList</a>
+            </h6>
+          </div>
+ 
+          <div class="col-md-2 mb-3">
+            <h6 class="text-uppercase font-weight-bold">
+              <a href="http://localhost:8000/contact">Contact</a>
+            </h6>
+          </div>
+]
+        </div>
+
+        <hr class="rgba-white-light" style="margin: 0 15%;" />
+        <div class="row d-flex text-center justify-content-center mb-md-0 mb-4">
+
+          <div class="col-md-8 col-12 mt-5">
+            <p style="line-height: 1.7rem;">
+              Vidflix, We are way better than Blockbuster
+            </p>
+          </div>
+
+        </div>
+
+        <hr
+          class="clearfix d-md-none rgba-white-light"
+          style="margin: 10% 15% 5%;"
+        />
+
+      <div class="footer-copyright text-center py-3">
+        © 2020 Copyright:
+        <a href="http://localhost:8000/home/"></a>
+      </div>
+      <!-- Copyright -->
+    </footer>
+    <!-- Footer -->
+    <br />
+  </body>
+</html>
